@@ -1,153 +1,60 @@
 .skills-container {
-    width: 100%;
     height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+}
+
+.skills-carrousel-container {
+    width: 100%;
+    height: 100%;
+}
+.skills-carousel-item-container {
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+}
+
+.skills-item-container {
+    width: 100%;
+    height: 100%;
     display: grid;
-    grid-template-columns: repeat(5, 20%);
+    grid-template-columns: repeat(4, 20%);
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
 .skills-item {
-    margin-top: 25%;
-    display: flex;
+    padding-top: 2%;
+    margin-right: 10%;
+    margin-left: 10%;
+    width: 80%;
+    display: grid;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 70%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    color: white;
+    color: black;
 }
 
-.js-image {
-    width: 70%;
-    height: 75%;
-    background-color: white;
-    color: rgb(255, 238, 0);
-    border-radius: 10px;
+.skills-item p {
+    text-align: center;
 }
 
-.html-image {
-    width: 70%;
-    height: 75%;
-    color: rgb(255, 102, 0);
-    background-color: white;
-    border-radius: 10px;
-}
-
-.css-image {
-    width: 70%;
-    height: 75%;
-    color: rgb(0, 119, 255);
-    background-color: white;
-    border-radius: 10px;
-}
-
-.react-image {
-    width: 70%;
-    height: 75%;
-    background-color: white;
-    color: rgb(0, 195, 255);
-    border-radius: 10px;
-}
-
-.git-image {
-    width: 70%;
-    height: 75%;
-    background-color: white;
-    color: rgb(255, 51, 0);
-    border-radius: 10px;
-}
-
-.npm-image {
-    width: 70%;
-    height: 75%;
-    color: red;
-    background-color: white;
-    border-radius: 10px;
-}
-
-.redux-image {
-    width: 70%;
-    height: 75%;
-    color: blueviolet;
-    background-color: white;
-    border-radius: 10px;
-}
-
-.node-image {
-    width: 70%;
-    height: 75%;
-    color: rgb(127, 201, 42);
-    background-color: white;
-    border-radius: 10px;
+.item-skill {
+    width: 100px;
+    height: 100px;
 }
 
 .express-image {
-    width: 70%;
-    height: 75%;
-    font-size: 50px;
-    color: rgb(22, 21, 21);
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    border-radius: 10px;
+    background-color: gray;
+    border-radius: 50%;
 }
 
-.js-image:hover {
-    border: 2px solid #122562;
-    box-shadow: 1px 1px 35px 1px white;
-    transition: all 0.2s;
-}
-
-.html-image:hover {
-    border: 2px solid #122562;
-    box-shadow: 1px 1px 35px 1px white;
-    transition: all 0.2s;
-}
-
-.css-image:hover {
-    border: 2px solid #122562;
-    box-shadow: 1px 1px 35px 1px white;
-    transition: all 0.2s;
-}
-
-.react-image:hover {
-    border: 2px solid #122562;
-    box-shadow: 1px 1px 35px 1px white;
-    transition: all 0.2s;
-}
-
-.git-image:hover {
-    border: 2px solid #122562;
-    box-shadow: 1px 1px 35px 1px white;
-    transition: all 0.2s;
-}
-
-.npm-image:hover {
-    border: 2px solid #122562;
-    box-shadow: 1px 1px 35px 1px white;
-    transition: all 0.2s;
-}
-
-.redux-image:hover {
-    border: 2px solid #122562;
-    box-shadow: 1px 1px 35px 1px white;
-    transition: all 0.2s;
-}
-
-.node-image:hover {
-    border: 2px solid #122562;
-    box-shadow: 1px 1px 35px 1px white;
-    transition: all 0.2s;
-}
-
-.express-image:hover {
-    border: 2px solid #122562;
-    box-shadow: 1px 1px 35px 1px white;
-    transition: all 0.2s;
+.skills-item:hover {
+    border-radius: 15px;
+    box-shadow: 1px 1px 30px 1px black;
+    transition: all 0.0s;
 }
 
 @media (max-width: 530px) {

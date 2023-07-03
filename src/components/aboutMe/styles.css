@@ -10,20 +10,24 @@
     width: 45%;
     height: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
 .image {
-    border-radius: 20%;
-    width: 75%;
-    height: 85%;
+    /* border-radius: 100%; */
+    /* width: 75%;
+    height: 85%; */
     display: flex;
     align-items: center;
 }
 
+.about-me {
+    font-size: 20px;
+}
+
 .about-me-presentation {
     width: 55%;
-    color: white;
+    color: black;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -34,7 +38,7 @@
 
 .about-me-presentation>h3 {
     width: 70%;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .about-me-pages-container {
@@ -47,13 +51,36 @@
 }
 
 .about-me-pages {
-    cursor: pointer;
+    color: black;
+    font-size: 35px;
+    text-decoration: none;
+    position: relative;
+}
+  
+.about-me-pages-cv {
+    font-size: 38px;
+}
+  
+.hover-text {
+    visibility: hidden;
+    font-size: 16px;
+    color: black;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+  
+.about-me-pages:hover .hover-text {
+    visibility: visible;
 }
 
 .about-me-pages:hover {
-    color: #122562;
+    color: #ff0080;
+    transform: scale(1.1);
+    transition: all 0.0s;
 }
-
 
 @media (max-width: 530px) {
     .about-me-container {
@@ -75,10 +102,6 @@
         height: 80%;
         display: flex;
         align-items: center;
-    }
-
-    .about-me-pages-container {
-        justify-content: space-between;
     }
 
     .about-me-presentation {

@@ -1,11 +1,8 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* height: 400vh; */
-  background-image: url(./assets/background.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
+  font-family: 'Source Code Pro';
+  background-color: #dbbba6;
 }
 
 #root {

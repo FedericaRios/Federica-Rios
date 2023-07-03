@@ -1,37 +1,66 @@
+import React, { useEffect } from 'react'
 import { AiFillGithub, AiFillLinkedin, AiOutlineIdcard } from "react-icons/ai";
-import Me from '../../assets/me.png';
-import styles from './styles.css';
+import perfil from '../../assets/perfil-transformed.png';
+import './styles.css';
 
-const AboutMe = () => {
+const AboutMe = ({ setActiveLink, activeLink }) => {
+
+    useEffect(() => {
+        if (activeLink) {
+            setActiveLink('/home#aboutMe')
+        }
+    }, [activeLink])
 
     return (
         <div className="about-me-container" id='/home#aboutMe'>
             <div className="image-container">
-                <img className="image" src={Me} ></img>
+                <img className="image" src={perfil} alt="Perfil" />
             </div>
             <div className="about-me-presentation">
                 <h1 className="about-me">Sobre mí</h1>
-                <h3>Soy una persona sociable, empatica, y me considero exigente, ya que me gusta retarme en los objetivos que me planteo.
-                    Me encanta aprender cosas nuevas y conocer nuevas personas. En mis tiempos libres aprecio salir a disfrutar de la naturaleza, escuchar música, hacer ejercicio y leer libros de mi interés.</h3>
+                <h3>
+                    Soy apasionada por el mundo de la programación, comencé siendo front-end developer y luego de tener la
+                    oportunidad de programar proyectos completos me entuciasmé también con el back-end.
+                    Me encuentro en constante aprendizaje de nuevas tecnologías y tendencias del desarrollo de software.
+                    Además de mi pasión por la programación, valoro la colaboración y el trabajo en equipo. Me encanta
+                    participar en proyectos conjuntos donde puedo aportar mi conocimiento y aprender de los demás.
+                </h3>
+                <h3>
+                    Fuera del ámbito laboral, disfruto explorar la belleza de la naturaleza para desconectar y recargar
+                    energías. Además, considero muy importante una constancia en el ejercicio físico y la lectura de libros
+                    que aporten distintos conocimientos para la vida.
+                </h3>
                 <div className="about-me-pages-container">
-                    <h1
+                    <a
+                        href="https://github.com/FedericaRios"
                         className="about-me-pages"
-                        onClick={() => window.open('https://github.com/FedericaRios')}>
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <AiFillGithub />
-                    </h1>
-                    <h1
+                        <h1 className="hover-text">GitHub</h1>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/federica-rios-bb9ab4197/"
                         className="about-me-pages"
-                        onClick={() => window.open('https://www.linkedin.com/in/federica-rios-bb9ab4197/')}>
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <AiFillLinkedin />
-                    </h1>
-                    <h1>
-                        <a download href='https://drive.google.com/file/d/1Sh2Ze2aTRtjOsIabq9vOU4vKXfxVYlU5/view?usp=sharing'><AiOutlineIdcard /></a>
-                    </h1>
+                        <h1 className="hover-text">Linkedin</h1>
+                    </a>
+                    <a
+                        href="https://drive.google.com/file/d/1Sh2Ze2aTRtjOsIabq9vOU4vKXfxVYlU5/view?usp=sharing"
+                        className="about-me-pages about-me-pages-cv"
+                        download
+                    >
+                        <AiOutlineIdcard />
+                        <h1 className="hover-text">CV</h1>
+                    </a>
                 </div>
             </div>
-        </div >
+        </div>
     )
-}
-
+};
 
 export default AboutMe;

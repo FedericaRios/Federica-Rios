@@ -1,12 +1,18 @@
+import React, { useEffect } from 'react'
 import toDos from '../../assets/todos.png';
 import Clima from '../../assets/clima.png'
 import Pokemon from '../../assets/pokemon.png'
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Carousel from 'react-bootstrap/Carousel'
-import style from './styles.css';
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import './styles.css';
 
+const Project = ({ setActiveLink, activeLink }) => {
 
-const Project = () => {
+    useEffect(() => {
+        if (activeLink) {
+            setActiveLink('/home#projects')
+        }
+    }, [activeLink])
 
     return (
         <div className="container" id='/home#projects'>
@@ -22,6 +28,7 @@ const Project = () => {
                                 className="project-item-img"
                                 src={toDos}
                                 onClick={() => window.open('https://federicarios.github.io/proyecto-TODOs/')}
+                                alt="ToDos"
                             ></img>
                         </div>
                         <div className="proyect-item-description">
@@ -43,6 +50,7 @@ const Project = () => {
                                 className="project-item-img"
                                 src={Clima}
                                 onClick={() => window.open('https://federicarios.github.io/proyecto-clima')}
+                                alt="Clima"
                             ></img>
                         </div>
                         <div className="proyect-item-description">
@@ -64,6 +72,7 @@ const Project = () => {
                                 className="project-item-img"
                                 src={Pokemon}
                                 onClick={() => window.open('https://federicarios.github.io/challenge-pokemon/')}
+                                alt="Pokemon"
                             ></img>
                         </div>
                         <div className="proyect-item-description">
@@ -80,7 +89,6 @@ const Project = () => {
             </Carousel>
         </div>
     )
-}
-
+};
 
 export default Project;

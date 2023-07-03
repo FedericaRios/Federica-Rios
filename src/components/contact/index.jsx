@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { SiWhatsapp } from "react-icons/si";
 import { RiMailLine } from "react-icons/ri";
 import { AiFillLinkedin } from "react-icons/ai";
-import style from './styles.css';
+import './styles.css';
 
-const Contact = () => {
+const Contact = ({ setActiveLink, activeLink }) => {
+
+    useEffect(() => {
+        if (activeLink) {
+            setActiveLink('/home#contact')
+        }
+    }, [activeLink])
 
     return (
         <div className="contact-container" id='/home#contact'>
