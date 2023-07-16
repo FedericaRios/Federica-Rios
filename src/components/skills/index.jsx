@@ -26,14 +26,8 @@ const skills = [
     { icon: <SiMysql className="item-skill logo-image" />, name: 'Workbench', color: '#0078c6' },
 ];
 
-const Skills = ({ setActiveLink, activeLink }) => {
+const Skills = () => {
     const [skillsBySlide, setSkillsBySlide] = useState();
-
-    useEffect(() => {
-        if (activeLink) {
-            setActiveLink('/home#skills')
-        }
-    }, [activeLink])
 
     useEffect(() => {
         const groupSkills = () => {
@@ -49,7 +43,7 @@ const Skills = ({ setActiveLink, activeLink }) => {
     }, [])
 
     return (
-        <div className="skills-container" id="/home#skills">
+        <div className="skills-container" id="skills">
             <Carousel
                 className='skills-carrousel-container'
                 nextIcon={<button className="buttons"><FiChevronRight /></button>}

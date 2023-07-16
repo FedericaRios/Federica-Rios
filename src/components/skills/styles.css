@@ -52,9 +52,10 @@
 }
 
 .skills-item:hover {
-    border-radius: 15px;
-    box-shadow: 1px 1px 30px 1px black;
+    /* border-radius: 12px; */
+    transform: scale(1.4);
     transition: all 0.0s;
+    /* box-shadow: 1px 1px 35px 0px antiquewhite; */
 }
 
 @media (max-width: 530px) {
@@ -62,52 +63,6 @@
     .skills-container {
         display: grid;
         grid-template-columns: repeat(3, 25%);
-    }
-
-    .js-image {
-        width: 85%;
-        height: 30%;
-    }
-
-    .html-image {
-        width: 85%;
-        height: 30%;
-    }
-
-    .css-image {
-        width: 85%;
-        height: 30%;
-    }
-
-    .react-image {
-        width: 85%;
-        height: 30%;
-    }
-
-    .git-image {
-        width: 85%;
-        height: 30%;
-    }
-
-    .npm-image {
-        width: 85%;
-        height: 30%;
-    }
-
-    .redux-image {
-        width: 85%;
-        height: 30%;
-    }
-
-    .node-image {
-        width: 85%;
-        height: 30%;
-    }
-
-    .express-image {
-        width: 85%;
-        height: 30%;
-        font-size: 15px;
     }
 
     /* .skills-item {

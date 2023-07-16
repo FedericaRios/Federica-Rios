@@ -1,7 +1,6 @@
 .container {
     width: 100%;
     height: 25%;
-    color: white;
 }
 
 .carrousel-container {
@@ -18,7 +17,7 @@
     height: 100%;
 }
 
-.project-item-container {
+.project-container {
     height: 100%;
     width: 100%;
     display: flex;
@@ -26,24 +25,63 @@
     justify-content: center;
 }
 
-.project-item-img-container {
-    width: 40%;
-    height: 80%;
+.project-item-container {
+    background-color: antiquewhite;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 0px, rgba(0, 0, 0, 0.1) 0px 8px 24px, rgba(0, 0, 0, 0.1) 0px 16px 48px;
+    border-radius: 10px;
+    width: 65%;
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.project-item-img {
-    width: 70%;
+.project-item-show {
+    width: 40%;
+    height: 100%;
+}
+
+.img-item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 80%;
+}
+
+.item-img {
+    width: 80%;
+    height: 90%;
     border-radius: 10px;
-    cursor: pointer;
+}
+
+.item-link-container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.icon-link {
+    font-size: 22px;
+    color: black;
+}
+
+.proyect-item-description>ul {
+    font-size: 18px;
+    width: 70%;
+}
+
+.name-project {
+    font-size: 20px;
+    font-weight: 900;
+    color: black;
+    margin: 0px 10px 0px 35px;
 }
 
 .proyect-item-description {
-    width: 45%;
+    width: 60%;
     height: 100%;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,18 +89,15 @@
     text-align: center;
 }
 
-h1 {
-    font-size: 35px;
+.project-description-list {
+    padding-left: 20px;
 }
-
-.proyect-item-description>h3 {
-    font-size: 25px;
-    width: 70%;
-
+  
+.project-description-list li {
+    margin-bottom: 10px;
 }
 
 .buttons {
-    border-radius: 5px;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -71,24 +106,19 @@ h1 {
     cursor: pointer;
     border: 1px solid black;
     color: black;
-    background-color: antiquewhite;
+    background-color: #dbbba6;
 }
 
-a {
-    opacity: 1 !important;
+.project-item-container:hover {
+    transform: scale(1.1);
+    transition: all 0.0s;
 }
 
-.project-item-img:hover {
-    border: 2px solid #122562;
-    box-shadow: 1px 1px 25px 0px white;
+.icon-link:hover {
+    transform: scale(1.5);
+    transition: all 0.0s;
+    color: #dbbba6;
 }
-
-.buttons:hover {
-    border: 1px solid black;
-    background-color: #ff0080;
-    color: black;
-}
-
 
 @media (min-width: 768px) {
 
@@ -101,13 +131,13 @@ a {
 
 @media (min-width: 530) {
 
-    .project-item-img-container {
+    .item-img-container {
         width: 40%;
         height: 100%;
         background-color: aqua;
     }
 
-    .project-item-img {
+    .item-img {
         width: 40%;
         height: 60%;
     }

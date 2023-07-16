@@ -7,17 +7,17 @@ import Contact from '../../components/contact'
 import './styles.css';
 
 const Home = () => {
-    const [activeLink, setActiveLink] = useState('');
+    const [activeSection, setActiveSection] = useState('aboutMe');
 
     return (
         <div className='home-container'>
-            <Nav activeLink={activeLink} setActiveLink={setActiveLink} />
-            <AboutMe activeLink={activeLink} setActiveLink={setActiveLink} />
-            <Skills activeLink={activeLink} setActiveLink={setActiveLink} />
-            <Projects activeLink={activeLink} setActiveLink={setActiveLink} />
-            <Contact activeLink={activeLink} setActiveLink={setActiveLink} />
+            <Nav activeSection={activeSection} setActiveSection={setActiveSection} />
+            <AboutMe />
+            <Skills />
+            <Projects />
+            <Contact />
         </div>
     )
-}
+};
 
 export default Home;

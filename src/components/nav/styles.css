@@ -5,7 +5,7 @@
     z-index: 1;
     display: flex;
     justify-content: center;
-    background-color: antiquewhite;
+    background-color: #dbbba6;
 }
 
 .nav-menu {
@@ -34,12 +34,9 @@
     text-underline-offset: 0.3em;
 }
 
-.nav-menu-text.active-link {
-    transform: scale(1.1);
-    transition: all 0.0s;
-    text-decoration: underline;
-    text-underline-offset: 0.3em;
-  }
+.active-link {
+    text-decoration: underline; 
+}
 
 @media (max-width: 530px) {
     .nav-container {
