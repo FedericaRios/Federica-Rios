@@ -4,11 +4,49 @@ import Clima from '../../assets/clima.png'
 import Pokemon from '../../assets/pokemon.png'
 import Carousel from 'react-bootstrap/Carousel'
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { AiFillGithub } from "react-icons/ai";
 import { BsLink } from "react-icons/bs";
 import './styles.css';
 
-const Project = () => {
+const projects = [
+    {
+        name: 'ToDos App',
+        imgSrc: toDos,
+        liveLink: 'https://federicarios.github.io/proyecto-TODOs/',
+        sourceLink: 'https://github.com/FedericaRios/proyecto-TODOs/tree/main',
+        description: [
+            'Permite gestionar las actividades diarias (desarrollada junto al curso de React en Platzi).',
+            'Desarrollado con React, JavaScript, HTML, CSS y Responsive Design.',
+            'Deployado en GitHub Pages.'
+        ],
+    },
+    {
+        name: 'Weather App',
+        imgSrc: Clima,
+        liveLink: 'https://federicarios.github.io/proyecto-clima',
+        sourceLink: 'https://github.com/FedericaRios/proyecto-clima/tree/main',
+        description: [
+            'Permite consultar el pronóstico del tiempo para diversas ciudades.',
+            'Desarrollado con React, JavaScript, HTML, CSS y Responsive Design.',
+            'Obtiene los datos del pronóstico de una API externa.',
+            'Deployado en GitHub Pages.'
+        ],
+    },
+    {
+        name: 'Pokemon App',
+        imgSrc: Pokemon,
+        liveLink: 'https://federicarios.github.io/challenge-pokemon/',
+        sourceLink: 'https://github.com/FedericaRios/challenge-pokemon',
+        description: [
+            'Permite buscar y conocer información sobre cualquier Pokémon, como sus habilidades.',
+            'Desarrollado con React, JavaScript, HTML, CSS y Responsive Design.',
+            'Integración de una API para proporcionar datos precisos y actualizados.',
+            'Deployado en GitHub Pages.'
+        ],
+    },
+];
 
+const Project = () => {
     return (
         <div className="container" id='projects'>
             <Carousel
@@ -16,104 +54,54 @@ const Project = () => {
                 nextIcon={<button className="buttons"><FiChevronRight /></button>}
                 prevIcon={<button className="buttons"><FiChevronLeft /></button>}
             >
-                <Carousel.Item className='carousel-item-container'>
-                    <div className="project-container">
-                        <div className="project-item-container">
-                            <div className="project-item-show">
-                                <div className="img-item-container">
-                                    <img
-                                        className="item-img"
-                                        src={toDos}
-                                        alt="ToDos"
-                                    ></img>
+                {projects.map((project, index) => (
+                    <Carousel.Item key={index} className='carousel-item-container'>
+                        <div className="project-container">
+                            <div className="project-item-container">
+                                <div className="project-item-show">
+                                    <div className="img-item-container">
+                                        <img
+                                            className="item-img"
+                                            src={project.imgSrc}
+                                            alt={project.name}
+                                        />
+                                    </div>
+                                    <div className="item-link-container">
+                                        <span className='name-project'>{project.name}</span>
+                                        <div className="icons-link-container">
+                                            <a
+                                                className="icon-link"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                href={project.liveLink}
+                                            >
+                                                <BsLink />
+                                            </a>
+                                            <a
+                                                className="icon-link"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                href={project.sourceLink}
+                                            >
+                                                <AiFillGithub />
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="item-link-container">
-                                    <span className='name-project'>ToDos App</span>
-                                    <a
-                                        className="icon-link"
-                                        href="https://federicarios.github.io/proyecto-TODOs/">
-                                        <BsLink />
-                                    </a>
+                                <div className="proyect-item-description">
+                                    <ul className="project-description-list">
+                                        {project.description.map((desc, index) => (
+                                            <li key={index}>{desc}</li>
+                                        ))}
+                                    </ul>
                                 </div>
-                            </div>
-                            <div className="proyect-item-description">
-                                <ul className="project-description-list">
-                                    <li>Permite gestionar las actividades diarias.</li>
-                                    <li>La desarrollé junto al curso de React en Platzi, utilizando las tecnologías de React, JavasCript,
-                                        Html, Css, y aplicando Responsive Design (disponible en mobile/celular y desktop).</li>
-                                    <li>Para hacer deploy/publicarlo utilicé GitHub-pages.</li>
-                                </ul>
                             </div>
                         </div>
-                    </div>
-                </Carousel.Item>
-
-                <Carousel.Item className='carousel-item-container'>
-                    <div className="project-container">
-                        <div className="project-item-container">
-                            <div className="project-item-show">
-                                <div className="img-item-container">
-                                    <img
-                                        className="item-img"
-                                        src={Clima}
-                                        alt="Clima"
-                                    ></img>
-                                </div>
-                                <div className="item-link-container">
-                                    <span className='name-project'>Wheater App</span>
-                                    <a
-                                        className="icon-link"
-                                        href='https://federicarios.github.io/proyecto-clima'>
-                                        <BsLink />
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="proyect-item-description">
-                                <ul className="project-description-list">
-                                    <li>Permite consultar el pronóstico del tiempo para diversas ciudades.</li>
-                                    <li>La desarrollé utilizando las tecnologías de React, JavasCript, Html, Css y aplicando Responsive Design.</li>
-                                    <li>Para obtener los datos del pronóstico, consumí una API externa garantizando la precisión y actualidad de la información.</li>
-                                    <li>La app se encuentra deployada en GitHub-pages.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </Carousel.Item>
-
-                <Carousel.Item className='carousel-item-container'>
-                    <div className="project-container">
-                        <div className="project-item-container">
-                            <div className="project-item-show">
-                                <div className="img-item-container">
-                                    <img
-                                        className="item-img"
-                                        src={Pokemon}
-                                        alt="Pokemon"
-                                    ></img>
-                                </div>
-                                <div className="item-link-container">
-                                    <span className='name-project'>Pokemon App</span>
-                                    <a
-                                        className="icon-link"
-                                        href='https://federicarios.github.io/challenge-pokemon/'>
-                                        <BsLink />
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="proyect-item-description">
-                                <ul className="project-description-list">
-                                    <li>Permite buscar y conocer información sobre cualquier Pokémon como por ejemplo, sus habilidades.</li>
-                                    <li>Las tecnologías utilizadas fueron React, JavasCript, Html, Css, y Responsive Design.</li>
-                                    <li>Gracias a la integración de una API, la aplicación proporciona datos precisos y actualizados.</li>
-                                    <li>La app se encuentra deployada en GitHub-pages.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </Carousel.Item>
+                    </Carousel.Item>
+                ))}
             </Carousel>
         </div>
-    )
+    );
 };
 
 export default Project;

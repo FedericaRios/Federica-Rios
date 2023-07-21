@@ -52,10 +52,8 @@
 }
 
 .skills-item:hover {
-    /* border-radius: 12px; */
     transform: scale(1.4);
     transition: all 0.0s;
-    /* box-shadow: 1px 1px 35px 0px antiquewhite; */
 }
 
 @media (max-width: 530px) {

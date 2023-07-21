@@ -11,12 +11,11 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .image {
-    /* border-radius: 100%; */
-    /* width: 75%;
-    height: 85%; */
+    border-radius: 25px; 
     display: flex;
     align-items: center;
 }
@@ -71,13 +70,32 @@
     transform: translateX(-50%);
     white-space: nowrap;
 }
+
+.fade-in-out {
+    animation: fadeInOut 3s ease infinite;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
   
 .about-me-pages:hover .hover-text {
     visibility: visible;
 }
 
 .about-me-pages:hover {
-    color: #ff0080;
+    color: #c5a48e;
+    transform: scale(1.1);
+    transition: all 0.0s;
+}
+
+
+.image:hover {
     transform: scale(1.1);
     transition: all 0.0s;
 }

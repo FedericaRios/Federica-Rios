@@ -44,7 +44,7 @@
 .img-item-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     height: 80%;
 }
 
@@ -57,8 +57,17 @@
 .item-link-container {
     width: 100%;
     height: 20%;
+    padding: 0% 0% 0% 0%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.icons-link-container {
+    width: 30%;
+    padding: 0% 12% 0% 0%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .icon-link {
@@ -106,7 +115,7 @@
     cursor: pointer;
     border: 1px solid black;
     color: black;
-    background-color: #dbbba6;
+    background-color: #c5a48e;
 }
 
 .project-item-container:hover {
@@ -115,9 +124,9 @@
 }
 
 .icon-link:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition: all 0.0s;
-    color: #dbbba6;
+    color: #c5a48e;
 }
 
 @media (min-width: 768px) {

@@ -2,38 +2,46 @@ import React, { useState, useEffect } from 'react';
 import './styles.css';
 
 const Nav = ({ activeSection, setActiveSection }) => {
+    const [scrollEventActive, setScrollEventActive] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
-            const sectionIds = ['aboutMe', 'skills', 'projects', 'contact'];
-            const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-            let currentSection = '';
+            if (scrollEventActive) {
+                const sectionIds = ['aboutMe', 'skills', 'projects', 'contact'];
+                const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+                let currentSection = '';
 
-            sectionIds.forEach((sectionId) => {
-                const section = document.getElementById(sectionId);
+                sectionIds.forEach((sectionId) => {
+                    const section = document.getElementById(sectionId);
 
-                if (section) {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
+                    if (section) {
+                        const sectionTop = section.offsetTop;
+                        const sectionHeight = section.offsetHeight;
 
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                        currentSection = sectionId;
+                        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                            currentSection = sectionId;
+                        }
                     }
-                }
-            });
-            setActiveSection(currentSection);
+                });
+                setActiveSection(currentSection);
+            }
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [scrollEventActive]);
 
     const handleLinkClick = (link) => {
+        setScrollEventActive(false); // Desactivar el evento scroll temporalmente
         setActiveSection(link);
 
         const section = document.getElementById(link);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
         }
+
+        setTimeout(() => {
+            setScrollEventActive(true);
+        }, 1000);
     };
 
     return (
