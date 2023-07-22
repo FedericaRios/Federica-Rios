@@ -8,7 +8,7 @@ import './styles.css';
 const AboutMe = () => {
     const [currentImage, setCurrentImage] = useState(photoMe1);
     const photos = [photoMe1, photoMe2];
-    const interval = 3000;
+    const interval = 1500;
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -36,7 +36,7 @@ const AboutMe = () => {
         <div className="about-me-container" id="aboutMe">
             <div className="image-container">
                 <img
-                    className="image fade-in-out"
+                    className="image"
                     src={currentImage}
                     alt="Perfil"
                     style={{
@@ -76,9 +76,8 @@ const AboutMe = () => {
                         <h1 className="hover-text">Linkedin</h1>
                     </a>
                     <a
-                        href="https://drive.google.com/file/d/1Sh2Ze2aTRtjOsIabq9vOU4vKXfxVYlU5/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1MIIDJ2ByjxeP42wCjj7cPBcm1HlUwvt_/view"
                         className="about-me-pages about-me-pages-cv"
-                        download
                         target="_blank"
                         rel="noopener noreferrer"
                     >

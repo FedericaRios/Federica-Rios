@@ -71,23 +71,6 @@
     white-space: nowrap;
 }
 
-.fade-in-out {
-    animation: fadeInOut 3s ease infinite;
-  }
-  
-  @keyframes fadeInOut {
-    0%, 100% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-  }
-  
-.about-me-pages:hover .hover-text {
-    visibility: visible;
-}
-
 .about-me-pages:hover {
     color: #c5a48e;
     transform: scale(1.1);
