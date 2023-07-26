@@ -23,12 +23,12 @@ const AboutMe = () => {
 
     const imageStyles = {
         width: {
-            image1: '385px',
-            image2: '350px',
+            image1: '290px',
+            image2: '270px',
         },
         height: {
-            image1: '350px',
-            image2: '350px',
+            image1: '270px',
+            image2: '270px',
         },
     };
 
@@ -44,8 +44,8 @@ const AboutMe = () => {
                         height: imageStyles.height[`image${photos.indexOf(currentImage) + 1}`],
                     }} />
             </div>
-            <div className="about-me-presentation">
-                <h1 className="about-me">Sobre mí</h1>
+            <div className="about-me-presentation-container">
+                <h1 style={{ fontSize: '20px' }}>Sobre mí</h1>
                 <h3>
                     Me encanta el mundo de la programación, soy desarrolladora full stack con preferencia hacia front-end,
                     pero también he tenido la oportunidad de programar en back-end. Valoro la colaboración y el trabajo en equipo,
@@ -64,7 +64,6 @@ const AboutMe = () => {
                         rel="noopener noreferrer"
                     >
                         <AiFillGithub />
-                        <h1 className="hover-text">GitHub</h1>
                     </a>
                     <a
                         href="https://www.linkedin.com/in/federica-rios-bb9ab4197/"
@@ -73,7 +72,6 @@ const AboutMe = () => {
                         rel="noopener noreferrer"
                     >
                         <AiFillLinkedin />
-                        <h1 className="hover-text">Linkedin</h1>
                     </a>
                     <a
                         href="https://drive.google.com/file/d/1MIIDJ2ByjxeP42wCjj7cPBcm1HlUwvt_/view"
@@ -82,7 +80,6 @@ const AboutMe = () => {
                         rel="noopener noreferrer"
                     >
                         <AiOutlineIdcard />
-                        <h1 className="hover-text">CV</h1>
                     </a>
                 </div>
             </div>

@@ -33,8 +33,7 @@ span {
 
 @media (max-width: 530px) {
     .contact-container {
-        display: flex;
-        justify-content: start;
+        margin-left: 10px;
     }
 
     .contacts-container {

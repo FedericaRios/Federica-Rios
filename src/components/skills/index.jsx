@@ -10,20 +10,20 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import './styles.css';
 
 const skills = [
-    { icon: <DiJavascript className="item-skill logo-image" />, name: 'JavaScript', color: 'rgb(255, 238, 0)' },
-    { icon: <IoLogoHtml5 className="item-skill logo-image" />, name: 'HTML', color: 'rgb(255, 102, 0)' },
-    { icon: <IoLogoCss3 className="item-skill logo-image" />, name: 'CSS', color: 'rgb(0, 119, 255)' },
-    { icon: <FaReact className="item-skill logo-image" />, name: 'React', color: 'rgb(0, 195, 255)' },
-    { icon: <IoLogoNpm className="item-skill logo-image" />, name: 'Npm', color: 'red' },
-    { icon: <SiRedux className="item-skill logo-image" />, name: 'Redux', color: 'blueviolet' },
-    { icon: <IoLogoNodejs className="item-skill logo-image" />, name: 'Node', color: 'rgb(127, 201, 42)' },
-    { icon: <h1 className="express-image item-skill logo-image" style={{ fontSize: "30px" }}>express</h1>, name: 'Express', color: '#dbbba6' },
-    { icon: <FaPhp className="item-skill logo-image" />, name: 'PHP', color: '#777BB4' },
-    { icon: <FaGitAlt className="item-skill logo-image" />, name: 'Git', color: 'rgb(255, 102, 0)' },
-    { icon: <DiBitbucket className="item-skill logo-image" />, name: 'Bitbucket', color: '#0052CC' },
-    { icon: <img className="logo-image" alt='MUI' src={materialUILogo} style={{ width: "110px", height: "105px" }} />, name: 'Material UI' },
-    { icon: <img className="logo-image" alt='ApiRest' src={apiRest} style={{ width: "110px", height: "80px", marginBottom: "14px" }} />, name: 'API Rest' },
-    { icon: <SiMysql className="item-skill logo-image" />, name: 'Workbench', color: '#0078c6' },
+    { icon: <DiJavascript className="item-skill" />, name: 'JavaScript', color: 'rgb(255, 238, 0)' },
+    { icon: <IoLogoHtml5 className="item-skill" />, name: 'HTML', color: 'rgb(255, 102, 0)' },
+    { icon: <IoLogoCss3 className="item-skill" />, name: 'CSS', color: 'rgb(0, 119, 255)' },
+    { icon: <FaReact className="item-skill" />, name: 'React', color: 'rgb(0, 195, 255)' },
+    { icon: <IoLogoNpm className="item-skill" />, name: 'Npm', color: 'red' },
+    { icon: <SiRedux className="item-skill" />, name: 'Redux', color: 'blueviolet' },
+    { icon: <IoLogoNodejs className="item-skill" />, name: 'Node', color: 'rgb(127, 201, 42)' },
+    { icon: <h1 className="express-image item-skill" style={{ fontSize: "20px" }}>express</h1>, name: 'Express', color: '#dbbba6' },
+    { icon: <FaPhp className="item-skill" />, name: 'PHP', color: '#777BB4' },
+    { icon: <FaGitAlt className="item-skill" />, name: 'Git', color: 'rgb(255, 102, 0)' },
+    { icon: <DiBitbucket className="item-skill" />, name: 'Bitbucket', color: '#0052CC' },
+    { icon: <img className="image-mui-skill" alt='MUI' src={materialUILogo} />, name: 'Material UI' },
+    { icon: <img className="image-apirest-skill" alt='ApiRest' src={apiRest} />, name: 'API Rest' },
+    { icon: <SiMysql className="item-skill" />, name: 'Workbench', color: '#0078c6' },
 ];
 
 const Skills = () => {

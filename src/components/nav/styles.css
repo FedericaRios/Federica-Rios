@@ -29,9 +29,7 @@
 
 .nav-menu-text:hover  {
     transform: scale(1.1);
-    transition: all 0.0s;
-    text-decoration: underline;
-    text-underline-offset: 0.3em;
+    transition: all 0.0s; 
 }
 
 .active-link {
@@ -41,17 +39,23 @@
 @media (max-width: 530px) {
     .nav-container {
         width: 100%;
+        padding: 0px 15px 0px 15px;
         display: flex;
         justify-content: center;
-        margin-right: 10px;
-    }
-
-    .nav-menu ul {
-        width: 100%;
-        margin-right: 10px;
     }
 
     .nav-menu {
-        justify-content: start;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .nav-menu-text a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .active-link {
+        text-decoration: underline; 
     }
 }
