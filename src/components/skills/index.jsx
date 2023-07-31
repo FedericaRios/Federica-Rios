@@ -28,6 +28,19 @@ const skills = [
 
 const Skills = () => {
     const [skillsBySlide, setSkillsBySlide] = useState();
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 530);
+        };
+
+        handleResize();
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     useEffect(() => {
         const groupSkills = () => {
@@ -46,8 +59,9 @@ const Skills = () => {
         <div className="skills-container" id="skills">
             <Carousel
                 className='skills-carrousel-container'
-                nextIcon={<button className="buttons"><FiChevronRight /></button>}
-                prevIcon={<button className="buttons"><FiChevronLeft /></button>}
+                interval={null}
+                nextIcon={!isMobile ? <button className="buttons"><FiChevronRight /></button> : ''}
+                prevIcon={!isMobile ? <button className="buttons"><FiChevronLeft /></button> : ''}
             >
                 {skillsBySlide?.map((arraySkills) => (
                     <Carousel.Item className='skills-carousel-item-container'>

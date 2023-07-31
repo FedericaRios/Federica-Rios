@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    height: 25%;
+    height: 100vh;
 }
 
 .carrousel-container {
@@ -129,70 +129,61 @@
     color: #c5a48e;
 }
 
-@media (min-width: 768px) {
-
-    .container,
-    .container-md,
-    .container-sm {
-        max-width: 100%;
-    }
-}
-
-@media (min-width: 530) {
-    /* .container {
-        width: 100%;
-        height: 100%;
-        background-color: aqua;
+@media (max-width: 530px) {
+  
+    .container {
+        display: flex;
+        align-items: center;
     }
 
     .carrousel-container {
         width: 100%;
-        height: 100%;
-        background-color: aqua;
-    } */
-
-    /* .carousel-item-container {
-        width: 100%;
+        height: 85%;
+    }
+    
+    .carousel-inner {
         height: 100%;
     }
-
+    
     .project-item-container {
-        width: 100%;
-        height: 100%;
-        background-color: aqua;
-    } */
-
-    /* .project-item-show {
-        background-color: aqua;
+        width: 85%;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-
-    .project-container {
-        background-color: aqua;
+    
+    .project-item-show {
         width: 100%;
         height: 100%;
     }
-
+    
     .item-img {
-        width: 40%;
-        height: 60%;
-    } */
+        width: 90%;
+        margin: 10px 0px 15px;
+    }
+    
+    .icon-link {
+        margin-left: 15px;
+    }
+    
+    .proyect-item-description>ul {
+        font-size: 15px;
+        width: 95%;
+    }
+    
+    .name-project {
+        margin: 0px 5px 0px 25px;
+    }
+    
+    .proyect-item-description {
+        width: 100%;
+        height: 100%;
+    }
 
-.item-link-container {
-    background-color: aqua;
-}
-.name-project {
-    background-color: aqua;
-}
-
-.icons-link-container {
-    background-color: aqua;
-
-}
-.proyect-item-description {
-    background-color: aqua;
-}
-.project-description-list {
-    background-color: aqua;
-
-}
+    .project-item-container:hover {
+        transform: none;
+        transition: none;
+    }
 }

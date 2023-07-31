@@ -1,5 +1,5 @@
 .skills-container {
-    height: 25%;
+    height: 100vh;
     width: 100%;
 }
 
@@ -7,6 +7,7 @@
     width: 100%;
     height: 100%;
 }
+
 .skills-carousel-item-container {
     width: 100%;
     height: 100%;
@@ -25,8 +26,7 @@
 
 .skills-item {
     padding-top: 2%;
-    margin-right: 10%;
-    margin-left: 10%;
+    margin: 0% 10% 0%;
     width: 80%;
     display: grid;
     align-items: center;
@@ -70,54 +70,47 @@
 @media (max-width: 530px) {
 
     .skills-container {
-        height: 25%;
-        width: 100%;
+        display: flex;
+        align-items: center;
     }
 
     .skills-carrousel-container {
-        height: 100%;
-        width: 100vw;
+        width: 100%;
+        height: 85%;
     }
 
     .skills-item-container {
         width: 100%;
         height: 100%;
         display: grid;
-        grid-template-columns: repeat(3, 20%);
+        grid-template-columns: repeat(3, 28%);
         gap: 30px;
         align-items: center;
         justify-content: center;
     }
 
     .item-skill {
-        width: 80px;
-        height: 80px;
+        width: 85px;
+        height: 85px;
     }
-
-    .image-mui-skill {
-        width: 100px;
-        height: 80px;
-    } 
 
     .image-apirest-skill {
         width: 90px;
-        height: 72px;
+        height: 70px;
         margin: 10px 20px 0px 15px;
     }
+
+    .image-mui-skill {
+        width: 110px;
+        height: 85px
+    } 
 
     .express-image {
         height: 75px;
     }
 
     .skills-item {
-        padding-top: 2%; 
-        margin-right: 10%; 
-        margin-left: 10%;
         width: 100%;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        color: black;
     }
 
     .skills-item:hover {

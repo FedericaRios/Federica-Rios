@@ -1,6 +1,6 @@
 .nav-container {
     width: 100%;
-    height: 10%;
+    height: 10vh;
     position: fixed;
     z-index: 1;
     display: flex;
@@ -38,10 +38,12 @@
 
 @media (max-width: 530px) {
     .nav-container {
+        height: 10vh;
         width: 100%;
         padding: 0px 15px 0px 15px;
         display: flex;
         justify-content: center;
+        z-index: 1;
     }
 
     .nav-menu {
@@ -50,7 +52,7 @@
         width: 100%;
     }
 
-    .nav-menu-text a {
+    .nav-menu-text > a {
         text-decoration: none;
         color: black;
     }
