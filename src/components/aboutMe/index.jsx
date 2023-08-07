@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { AiFillGithub, AiFillLinkedin, AiOutlineIdcard } from "react-icons/ai";
 import photoMe1 from '../../assets/PhotoMe1.jpg';
 import photoMe2 from '../../assets/PhotoMe2.jpg';
-
 import './styles.css';
 
 const AboutMe = () => {
@@ -45,16 +44,18 @@ const AboutMe = () => {
                     }} />
             </div>
             <div className="about-me-presentation-container">
-                <h1 style={{ fontSize: '20px' }}>Sobre mí</h1>
+                <div className="about-me-title">
+                    <div className="line-title"></div>
+                    <h4 style={{ fontSize: '20px', margin: '5px 15px 5px' }}>Sobre mí</h4>
+                    <div className="line-title"></div>
+                </div>
                 <h3>
                     Me encanta el mundo de la programación, soy desarrolladora full stack con preferencia hacia front-end,
                     pero también he tenido la oportunidad de programar en back-end. Valoro la colaboración y el trabajo en equipo,
-                    me encanta participar en proyectos conjuntos donde puedo aportar mi conocimiento y aprender de los demás.
-                </h3>
-                <h3>
+                    me encanta participar en proyectos conjuntos donde puedo aportar mi conocimiento y aprender de los demás.<br />
+                    <br />
                     Fuera del ámbito laboral, disfruto explorar la belleza de la naturaleza para desconectar y recargar
-                    energías. Además, considero muy importante una constancia en el ejercicio físico y la lectura de libros
-                    que aporten distintos conocimientos para la vida.
+                    energías, hacer ejercicio físico y leer libros que aporten distintos conocimientos para la vida.
                 </h3>
                 <div className="about-me-pages-container">
                     <a

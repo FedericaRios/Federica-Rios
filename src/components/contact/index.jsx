@@ -5,14 +5,17 @@ import { AiFillLinkedin } from "react-icons/ai";
 import './styles.css';
 
 const Contact = () => {
-
     return (
-        <div className="contact-container" id='contact'>
-            <div className="contacts-container">
-                <span><SiWhatsapp className="iconos" /> 637051193</span>
-                <span onClick={() => window.open('https://www.linkedin.com/in/federica-rios-bb9ab4197/')}
-                    className="enlace-in"><AiFillLinkedin className="iconos" /> https://www.linkedin.com/in/federica-rios-bb9ab4197/</span>
-                <span><RiMailLine className="iconos" /> rojofederica21@gmail.com</span>
+        <div className="contact-container-general" id='contact'>
+            <div className="contact-container">
+                <span className="items-container"><SiWhatsapp className="iconos" /> 637051193</span>
+                <span
+                    className="items-container enlace-in"
+                    onClick={() => window.open('https://www.linkedin.com/in/federica-rios-bb9ab4197/')}
+                >
+                    <AiFillLinkedin className="linkedin-icon" /> https://www.linkedin.com/in/federica-rios-bb9ab4197/
+                </span>
+                <span className="items-container"><RiMailLine className="iconos" /> rojofederica21@gmail.com</span>
             </div>
         </div>
     )
