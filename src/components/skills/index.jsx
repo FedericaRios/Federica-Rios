@@ -10,14 +10,14 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import './styles.css';
 
 const skills = [
-    { icon: <DiJavascript className="item-skill" />, name: 'JavaScript', color: 'rgb(255, 238, 0)' },
+    { icon: <DiJavascript className="item-skill" />, name: 'JavaScript', color: 'rgb(255, 217, 0)' },
     { icon: <IoLogoHtml5 className="item-skill" />, name: 'HTML', color: 'rgb(255, 102, 0)' },
     { icon: <IoLogoCss3 className="item-skill" />, name: 'CSS', color: 'rgb(0, 119, 255)' },
     { icon: <FaReact className="item-skill" />, name: 'React', color: 'rgb(0, 195, 255)' },
     { icon: <IoLogoNpm className="item-skill" />, name: 'Npm', color: 'red' },
     { icon: <SiRedux className="item-skill" />, name: 'Redux', color: 'blueviolet' },
     { icon: <IoLogoNodejs className="item-skill" />, name: 'Node', color: 'rgb(127, 201, 42)' },
-    { icon: <h1 className="express-image item-skill" style={{ fontSize: "20px" }}>express</h1>, name: 'Express', color: '#dbbba6' },
+    { icon: <h1 className="express-image item-skill" style={{ fontSize: "20px" }}>express</h1>, name: 'Express', color: 'rgba(255, 255, 255, 0.685)' },
     { icon: <FaPhp className="item-skill" />, name: 'PHP', color: '#777BB4' },
     { icon: <FaGitAlt className="item-skill" />, name: 'Git', color: 'rgb(255, 102, 0)' },
     { icon: <DiBitbucket className="item-skill" />, name: 'Bitbucket', color: '#0052CC' },
@@ -32,7 +32,7 @@ const Skills = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 530);
+            setIsMobile(window.innerWidth < 500);
         };
 
         handleResize();
@@ -60,8 +60,8 @@ const Skills = () => {
             <Carousel
                 className='skills-carrousel-container'
                 interval={null}
-                nextIcon={!isMobile ? <button className="buttons"><FiChevronRight /></button> : ''}
-                prevIcon={!isMobile ? <button className="buttons"><FiChevronLeft /></button> : ''}
+                nextIcon={isMobile ? '' : <button className="buttons"><FiChevronRight /></button>}
+                prevIcon={isMobile ? '' : <button className="buttons"><FiChevronLeft /></button>}
             >
                 {skillsBySlide?.map((arraySkills, index) => (
                     <Carousel.Item className='skills-carousel-item-container' key={index}>

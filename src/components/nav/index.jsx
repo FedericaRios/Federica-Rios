@@ -7,7 +7,7 @@ const Nav = ({ activeSection, setActiveSection }) => {
     useEffect(() => {
         const handleScroll = () => {
             if (scrollEventActive) {
-                const sectionIds = ['aboutMe', 'skills', 'projects', 'contact'];
+                const sectionIds = ['presentation', 'aboutMe', 'skills', 'projects', 'contact'];
                 const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
                 let currentSection = '';
 
@@ -47,6 +47,11 @@ const Nav = ({ activeSection, setActiveSection }) => {
     return (
         <div className="nav-container">
             <nav className="nav-menu">
+                <h1 className={`nav-menu-text ${activeSection === 'presentation' ? 'active-link' : ''}`}>
+                    <a href="#/#presentation" onClick={() => handleLinkClick('presentation')}>
+                        Presentation
+                    </a>
+                </h1>
                 <h1 className={`nav-menu-text ${activeSection === 'aboutMe' ? 'active-link' : ''}`}>
                     <a href="#/#aboutMe" onClick={() => handleLinkClick('aboutMe')}>
                         About Me

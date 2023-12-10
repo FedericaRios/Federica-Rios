@@ -1,8 +1,11 @@
+* {
+  font-family: sans-serif
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
-  background-color: antiquewhite;
-  font-family: 'Source Code Pro';
+  background-color: rgba(255, 255, 255, 0.685);
 }
 
 #root {

@@ -1,5 +1,5 @@
 .about-me-container {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     padding-top: 4.5%;
     display: flex;
@@ -15,6 +15,8 @@
 }
 
 .image {
+    width: 45%;
+    height: 45%;
     border-radius: 25px; 
     display: flex;
     align-items: center;
@@ -22,7 +24,7 @@
 
 .about-me-presentation-container {
     width: 55%;
-    color: black;
+    color:  rgb(27, 24, 19);
     text-align: center;
     display: flex;
     justify-content: center;
@@ -33,7 +35,7 @@
 
 .about-me-presentation-container>h3 {
     width: 75%;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .about-me-title {
@@ -45,7 +47,7 @@
 
 .line-title {
     width: 30%;
-    border: 1px solid #c5a48e;
+    border: 1px solid #3d2a1d;
     height: 0px
 }
 
@@ -59,7 +61,7 @@
 }
 
 .about-me-pages {
-    color: black;
+    color:  rgb(27, 24, 19);
     font-size: 35px;
     text-decoration: none;
     position: relative;
@@ -70,7 +72,7 @@
 }
 
 .about-me-pages:hover {
-    color: #c5a48e;
+    color: #3d2a1d;
     transform: scale(1.1);
     transition: all 0.0s;
 }
@@ -90,8 +92,7 @@
 
     .image-container {
         width: 100%;
-        height: 42%;
-        margin-top: 4%;
+        height: 40%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -99,25 +100,29 @@
 
     .about-me-presentation-container {
         width: 100%;
-        height: 50%;
+        height: 60%;
         justify-content: space-evenly;
     }
 
     .about-me-presentation-container>h3 {
-        font-size: 15px;
         width: 85%;
     }
 
     .image {
-        margin-top: 15%;
-        width: 100%;
-        height: 100%;
+        margin-top: 10vh;
+        width: 85%;
+        height: 85%;
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
     .image:hover {
         transform: none;
         transition: none;
+    }
+
+    .about-me-title {
+        width: 90%;
     }
 }

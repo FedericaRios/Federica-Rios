@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
-import Nav from '../../components/nav'
-import AboutMe from '../../components/aboutMe'
-import Skills from '../../components/skills'
-import Projects from '../../components/projects'
-import Contact from '../../components/contact'
+import React, { useState } from 'react';
+import Nav from '../../components/nav';
+import Presentation from '../../components/presentation';
+import AboutMe from '../../components/aboutMe';
+import Skills from '../../components/skills';
+import Projects from '../../components/projects';
+import Contact from '../../components/contact';
 import './styles.css';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
     return (
         <div className='home-container'>
             <Nav activeSection={activeSection} setActiveSection={setActiveSection} />
+            <Presentation />
             <AboutMe />
             <Skills />
             <Projects />
