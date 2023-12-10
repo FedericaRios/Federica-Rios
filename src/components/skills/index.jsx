@@ -58,10 +58,11 @@ const Skills = () => {
     return (
         <div className="skills-container" id="skills">
             <Carousel
+                indicators={true}
                 className='skills-carrousel-container'
                 interval={null}
-                nextIcon={isMobile ? '' : <button className="buttons"><FiChevronRight /></button>}
-                prevIcon={isMobile ? '' : <button className="buttons"><FiChevronLeft /></button>}
+                nextIcon={isMobile ? false : <button className="buttons"><FiChevronRight /></button>}
+                prevIcon={isMobile ? false : <button className="buttons"><FiChevronLeft /></button>}
             >
                 {skillsBySlide?.map((arraySkills, index) => (
                     <Carousel.Item className='skills-carousel-item-container' key={index}>

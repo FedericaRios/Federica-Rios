@@ -64,10 +64,10 @@ const Project = () => {
     return (
         <div className="container" id='projects'>
             <Carousel
+                indicators={true}
                 className='carrousel-container'
-                interval={null}
-                nextIcon={isMobile ? '' : <button className="buttons"><FiChevronRight /></button>}
-                prevIcon={isMobile ? '' : <button className="buttons"><FiChevronLeft /></button>}
+                nextIcon={isMobile ? false : <button className="buttons"><FiChevronRight /></button>}
+                prevIcon={isMobile ? false : <button className="buttons"><FiChevronLeft /></button>}
             >
                 {projects.map((project, index) => (
                     <Carousel.Item key={index}>
